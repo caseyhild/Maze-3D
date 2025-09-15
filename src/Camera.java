@@ -12,7 +12,7 @@ public class Camera implements KeyListener
 
     public Camera(double x, double y, double xd, double yd, double xp, double yp) 
     {   
-        //gets starting location and direction
+        // gets starting location and direction
         xPos = x;
         yPos = y;
         xDir = xd;
@@ -23,7 +23,6 @@ public class Camera implements KeyListener
         turnRight = 0;
     }
 
-    //checks if key is pressed
     public void keyPressed(KeyEvent key)
     {
         if((key.getKeyCode() == KeyEvent.VK_LEFT))
@@ -35,7 +34,7 @@ public class Camera implements KeyListener
         if((key.getKeyCode() == KeyEvent.VK_DOWN))
             back = true;
     }
-    //checks if key is released
+
     public void keyReleased(KeyEvent key)
     {
         if((key.getKeyCode() == KeyEvent.VK_LEFT))
@@ -47,7 +46,7 @@ public class Camera implements KeyListener
         if((key.getKeyCode() == KeyEvent.VK_DOWN))
             back = false;
     }
-    //checks if key is typed
+
     public void keyTyped(KeyEvent key)
     {
 
@@ -55,7 +54,7 @@ public class Camera implements KeyListener
 
     public void update(int[][] map)
     {
-        //moves and turns player based on key input
+        // moves and turns player based on key input
         double MOVE_SPEED = .08;
         if(forward)
         {
